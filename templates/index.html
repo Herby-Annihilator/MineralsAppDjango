@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>Главная</title>
 </head>
 <body>
@@ -13,7 +14,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark background">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img src="../images/photo_3.jpg" width="90" height="100" alt="logo">
+                    {% load static %}
+                    <img src="{% static 'images/photo_3.jpg' %}" width="90" height="100" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,7 +26,7 @@
                             <a class="nav-link active" href="#">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../html/minerals.html">Минералы</a>
+                            <a class="nav-link" href="{% url 'admin' %}">Минералы</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Исследователи</a>
@@ -64,7 +66,8 @@
             <div class="row">
                 <div class="col-4">
                     <div class="card">
-                        <img src="../images/mineral_3.png" class="card-img-top image" alt="Основной минерал">
+                        {% load static %}
+                        <img src="{% static 'images/mineral_3.png' %}" class="card-img-top image" alt="Основной минерал">
                         <div class="card-body">
                           <h2 class="card-title">Минерал</h2>
                           <p class="card-text">Американская транснациональная корпорация в составе холдинга Alphabet, инвестирующая в интернет-поиск, облачные вычисления </p>
@@ -76,7 +79,8 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="../images/mineral_3.png" class="img-fluid rounded-start image" alt="Минерал">
+                                    {% load static %}
+                                    <img src="{% static 'images/mineral_3.png' %}" class="img-fluid rounded-start image" alt="Минерал">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -89,7 +93,8 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="../images/mineral_3.png" class="img-fluid rounded-start image" alt="Минерал">
+                                    {% load static %}
+                                    <img src="{% static 'images/mineral_3.png' %}" class="img-fluid rounded-start image" alt="Минерал">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -106,7 +111,8 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="../images/mineral_3.png" class="img-fluid rounded-start image" alt="Минерал">
+                                    {% load static %}
+                                    <img src="{% static 'images/mineral_3.png' %}" class="img-fluid rounded-start image" alt="Минерал">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -119,7 +125,8 @@
                         <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="../images/mineral_3.png" class="img-fluid rounded-start image" alt="Минерал">
+                                    {% load static %}
+                                    <img src="{% static 'images/mineral_3.png' %}" class="img-fluid rounded-start image" alt="Минерал">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -146,7 +153,8 @@
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100">
-                            <img src="../images/user_icon.png" class="card-img-top" alt="...">
+                        {% load static %}
+                            <img src="{% static 'images/user_icon.png' %}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Исследователь</h5>
                                 <p class="card-text">Готовые примеры и крутые идеи визитных карточек для любой профессии и сферы бизнеса Советы экспертов по оформлению визиток.</p>
@@ -155,7 +163,8 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                            <img src="../images/user_icon.png" class="card-img-top" alt="...">
+                        {% load static %}
+                            <img src="{% static 'images/user_icon.png' %}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Исследователь</h5>
                                 <p class="card-text">Готовые примеры и крутые идеи визитных карточек для любой профессии и сферы бизнеса Советы экспертов по оформлению визиток.</p>
@@ -164,7 +173,8 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                            <img src="../images/user_icon.png" class="card-img-top" alt="...">
+                        {% load static %}
+                            <img src="{% static 'images/user_icon.png' %}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Исследователь</h5>
                                 <p class="card-text">Готовые примеры и крутые идеи визитных карточек для любой профессии и сферы бизнеса Советы экспертов по оформлению визиток.</p>
@@ -173,7 +183,8 @@
                 </div>
                 <div class="col">
                     <div class="card h-100">
-                            <img src="../images/user_icon.png" class="card-img-top" alt="...">
+                        {% load static %}
+                            <img src="{% static 'images/user_icon.png' %}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Исследователь</h5>
                                 <p class="card-text">Готовые примеры и крутые идеи визитных карточек для любой профессии и сферы бизнеса Советы экспертов по оформлению визиток.</p>
@@ -195,7 +206,8 @@
             <div class="row">
                 <div class="col-4">
                     <div class="card">
-                        <img src="../images/publish.jpg" class="card-img-top" alt="публикация">
+                        {% load static %}
+                        <img src="{% static 'images/publish.jpg' %}" class="card-img-top" alt="публикация">
                         <div class="card-body">
                             <h3 class="card-title">Публикация</h3>
                             <p class="card-text">Американская транснациональная корпорация в составе холдинга Alphabet, инвестирующая в интернет-поиск, облачные вычисления </p>
@@ -206,7 +218,8 @@
                     <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="../images/publish_2.jpeg" class="img-fluid rounded-start" alt="...">
+                                {% load static %}
+                                <img src="{% static 'images/publish_2.jpeg' %}" class="img-fluid rounded-start" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -220,7 +233,8 @@
                     <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="../images/publish_2.jpeg" class="img-fluid rounded-start" alt="...">
+                                {% load static %}
+                                <img src="{% static 'images/publish_2.jpeg' %}" class="img-fluid rounded-start" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -236,7 +250,8 @@
                     <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="../images/publish_2.jpeg" class="img-fluid rounded-start" alt="...">
+                                {% load static %}
+                                <img src="{% static 'images/publish_2.jpeg' %}" class="img-fluid rounded-start" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -250,7 +265,8 @@
                     <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4">
-                                <img src="../images/publish_2.jpeg" class="img-fluid rounded-start" alt="...">
+                                {% load static %}
+                                <img src="{% static 'images/publish_2.jpeg' %}" class="img-fluid rounded-start" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -270,8 +286,8 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <a href="../html/index.html">Главная</a>
-                    <a href="../html/minerals.html">Минералы</a>
+                    <a href="{% url 'index' %}">Главная</a>
+                    <a href="{% url 'admin' %}">Минералы</a>
                     <a href="#">Исследователи</a>
                 </div>
                 <div class="col">
@@ -285,7 +301,7 @@
                     <a href="#">Нашли ошибку?</a>
                 </div>
                 <div class="col">
-                    <a href="../html/admin.html">Войти</a>
+                    <a href="{% url 'admin' %}">Войти</a>
                 </div>
             </div>
             <div class="row">
@@ -295,7 +311,7 @@
             </div>
         </div>
     </footer>
-
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    {% load static %}
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

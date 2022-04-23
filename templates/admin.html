@@ -153,8 +153,8 @@
             <div class="row">
                 {% load static %}
                 <div class="col">
-                    <a href="../html/index.html">Главная</a>
-                    <a href="../html/minerals.html">Минералы</a>
+                    <a href="{% url 'index' %}">Главная</a>
+                    <a href="#">Минералы</a>
                     <a href="#">Исследователи</a>
                 </div>
                 <div class="col">
@@ -168,7 +168,7 @@
                     <a href="#">Нашли ошибку?</a>
                 </div>
                 <div class="col">
-                    <a href="../html/admin.html">Войти</a>
+                    <a href="{% url 'admin' %}">Войти</a>
                 </div>
             </div>
             <div class="row">
