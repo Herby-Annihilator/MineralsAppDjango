@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from models import *
 
 
 # Create your views here.
+from mineralsApp.models import *
 
 
 def load_minerals_page(request):
