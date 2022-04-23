@@ -7,7 +7,7 @@ urlpatterns = [
     path('', views.load_index_page, name='index'),
     # path('about', views.loadAboutPage, name='about_page'),
     path('admin', views.load_minerals_page, name='admin'),
-    # path('city/<city_id>', views.loadCityPage),
+    path('details/<mineral_id>', views.load_details_page),
     # path('excursions', views.loadExcursionsPage, name='excursions_page'),
     # path('excursion/<excursion_id>', views.loadExcursionPage),
     # path('excursion/delete/<excursion_id>', views.deleteExcursion),
