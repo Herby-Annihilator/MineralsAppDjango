@@ -2,7 +2,7 @@ from django.http import Http404
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from mineralsApp.models import *
+from mineralsApp.forms import *
 
 
 def load_minerals_page(request):
@@ -18,16 +18,29 @@ def load_details_page(request, mineral_id):
     try:
         mineral = Mineral.objects.get(pk=mineral_id)
     except Mineral.DoesNotExist:
-        raise Http404("Mineral does not exists")
+        raise Http404("Mineral does not exist")
     return render(request, 'minerals.html', {'mineral': mineral})
 
 
 def load_edit_page(request, mineral_id):
-    try:
+    if request.method == 'POST':
+        form = EditForm(request.POST)
+        if form.is_valid():
+            form.save()
+
         mineral = Mineral.objects.get(pk=mineral_id)
-    except Mineral.DoesNotExist:
-        raise Http404("Mineral does not exists")
-    return render(request, 'edit.html', {'mineral': mineral})
+        form = EditForm()
+        return render(request, 'edit.html', {'mineral': mineral, 'form': form})
+
+
+def load_create_page(request):
+    if request.method == 'POST':
+        form = CreateForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    form = CreateForm()
+    return render(request, 'edit.html', {'form': form})
 
 
 def delete_mineral(request, mineral_id):
@@ -35,8 +48,5 @@ def delete_mineral(request, mineral_id):
         mineral = Mineral.objects.get(pk=mineral_id)
         mineral.delete()
     except Mineral.DoesNotExist:
-        raise Http404("Mineral does not exists")
+        raise Http404("Mineral does not exist")
     return redirect('admin')
-
-
-
